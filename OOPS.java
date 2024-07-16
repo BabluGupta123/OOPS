@@ -1,3 +1,9 @@
+// Access Modifiers:-
+// https://www.techopedia.com/definition/23/access-modifiers
+
+// Getter and Setter
+// https://www.baeldung.com/java-why-getters-setters
+
 public class OOPS {
 
     public static void main(String[] args) {
