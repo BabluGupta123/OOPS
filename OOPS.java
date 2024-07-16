@@ -10,22 +10,26 @@ public class OOPS {
 
         pen p1 = new pen();
 
+        // p1.setColor("Red");
+        // p1.setTip(5);
+
+        // System.out.println(p1.color);
+        // System.out.println(p1.tip);
+
+        // // OR
+        // p1.color = "Blue";
+        // p1.tip = 6;
+
+        // System.out.println(p1.color);
+        // System.out.println(p1.tip);
+
         p1.setColor("Red");
         p1.setTip(5);
+        System.out.println(p1.getColor());
+        System.out.println(p1.getTip());
 
-        System.out.println(p1.color);
-        System.out.println(p1.tip);
-
-        // OR
-        p1.color = "Blue";
-        p1.tip = 6;
-
-        System.out.println(p1.color);
-        System.out.println(p1.tip);
- 
-
-        BackAccount myAccount= new BackAccount();
-        myAccount.UserName= "Bablu Gupta";
+        BackAccount myAccount = new BackAccount();
+        myAccount.UserName = "Bablu Gupta";
         myAccount.setPassword("abcdef");
 
         System.out.println(myAccount.UserName);
@@ -34,16 +38,37 @@ public class OOPS {
 }
 
 // ---------------------------- Pen Class ---------------------------------
-class pen {
-    String color;
-    int tip;
+// class pen {
+// String color;
+// int tip;
 
-    void setColor(String newColor) {
-        color = newColor;
+// void setColor(String newColor) {
+// color = newColor;
+// }
+
+// void setTip(int newTip) {
+// tip = newTip;
+// }
+// }
+
+class pen {
+    private String color;
+    private int tip;
+
+    void setColor(String color) {
+        this.color = color;
+    }
+
+    String getColor() {
+        return this.color;
+    }
+
+    int getTip() {
+        return this.tip;
     }
 
     void setTip(int newTip) {
-        tip = newTip;
+        this.tip = newTip;
     }
 }
 
@@ -52,7 +77,7 @@ class pen {
 // --------------------------- BackAccount --------------------------------
 class BackAccount {
 
-   public String UserName;
+    public String UserName;
     private String Password;
 
     public void setPassword(String pass) {
