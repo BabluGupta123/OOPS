@@ -1,21 +1,90 @@
+// Access Modifiers:-
+// https://www.techopedia.com/definition/23/access-modifiers
+
+// Getter and Setter
+// https://www.baeldung.com/java-why-getters-setters
+
 public class OOPS {
 
     public static void main(String[] args) {
 
-        Student s1 = new Student();
+        pen p1 = new pen();
+
+        // p1.setColor("Red");
+        // p1.setTip(5);
+
+        // System.out.println(p1.color);
+        // System.out.println(p1.tip);
+
+        // // OR
+        // p1.color = "Blue";
+        // p1.tip = 6;
+
+        // System.out.println(p1.color);
+        // System.out.println(p1.tip);
+
+        p1.setColor("Red");
+        p1.setTip(5);
+        System.out.println(p1.getColor());
+        System.out.println(p1.getTip());
+
+        BackAccount myAccount = new BackAccount();
+        myAccount.UserName = "Bablu Gupta";
+        myAccount.setPassword("abcdef");
+
+        System.out.println(myAccount.UserName);
 
     }
 }
 
-class Student {
+// ---------------------------- Pen Class ---------------------------------
+// class pen {
+// String color;
+// int tip;
 
-    String name;
-    int RollNo;
+// void setColor(String newColor) {
+// color = newColor;
+// }
 
-    //Constructor
-    Student() {
+// void setTip(int newTip) {
+// tip = newTip;
+// }
+// }
 
-        System.out.println("Constructor is called at Object Creation");
+class pen {
+    private String color;
+    private int tip;
 
+    void setColor(String color) {
+        this.color = color;
+    }
+
+    String getColor() {
+        return this.color;
+    }
+
+    int getTip() {
+        return this.tip;
+    }
+
+    void setTip(int newTip) {
+        this.tip = newTip;
     }
 }
+
+// --------------------------------------x Pen x---------------------------
+
+// --------------------------- BackAccount --------------------------------
+class BackAccount {
+
+    public String UserName;
+    private String Password;
+
+    public void setPassword(String pass) {
+        Password = pass;
+
+    }
+
+}
+
+// ---------------------------x BackAccount x--------------------------------
